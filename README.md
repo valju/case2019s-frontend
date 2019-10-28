@@ -18,6 +18,11 @@ Front-end React and Reedux web app for the Fall 2019 case
     "react-scripts": "^3.2.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
+
+npm install axios
+npm install react-router-dom
+npm install redux react-redux redux-thunk
+npm install moment
     
 7. git commit again, and push. So that remote package.json would refer to the new dependencies as well.
 8. creating folders action, components, constants, (models?), reducers, router, views
