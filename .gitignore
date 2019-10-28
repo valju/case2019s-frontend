@@ -59,3 +59,17 @@ typings/
 
 # next.js build output
 .next
+
+# misc, e.g. Mac or Windows environment
+.DS_Store
+desktop.ini
+thumbs.db
+
+# Dia temporary files
+.dia~
+
+# Temporary files
+*~
+
+# Juhani's teacher script for heavy editing of Word file (danger zone)
+autoPush.bat
