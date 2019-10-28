@@ -20,15 +20,18 @@ Front-end React and Reedux web app for the Fall 2019 case
     "redux-thunk": "^2.3.0"
 
 npm install axios
+
 npm install react-router-dom
+
 npm install redux react-redux redux-thunk
+
 npm install moment
     
 7. git commit again, and push. So that remote package.json would refer to the new dependencies as well.
-8. creating folders action, components, constants, (models?), reducers, router, views
+8. creating folders action, components, constants, (models?), reducers, router, views (with some empty index.js for each)
 9. adding the redux store creation function
 10. calling there the rootreducer to get the combined reducers to the store
-11. wrapping the Redux store Provider around the the root element so that all the elements get the same Redux store
+11. wrapping the Redux store Provider element around the the root React element so that all the elements get the same Redux store
 
 ... then how to add Router
 
