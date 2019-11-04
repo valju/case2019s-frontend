@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllUsers } from '../../actions/users'
 import UserListItem from './UserListItem';
+
 class UserList extends Component {
   componentDidMount() {
     this.props.userFetchAll();
@@ -24,6 +25,7 @@ const mapDispatchToProps = dispatch => ({
   )
 
 });
+
 const mapStateToProps = state => ({
   users: state.users
 });
