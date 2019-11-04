@@ -1,5 +1,4 @@
-import ActionTypes from './ActionTypes';
-// import axios from 'axios';
+import ActionTypes from './ActionTypes'; // import axios from 'axios';
 
 export const usersAll_REQ = () => ({
     type: ActionTypes.USERS_ALL_REQ,
@@ -14,11 +13,10 @@ export const usersAll_X = () => ({
     type: ActionTypes.USERS_ALL_X,
 });
 
-
+//testing data simulating backend/DB
 const dataUser = [
     { name: "ashley", id: 1 }, { name: "giang", id: 2 }, { name: "felix", id: 3 }, { name: "blerim", id: 4 }
 ]
-//testing data simulating backend/DB
 
 export function fetchAllUsers() {
     return async (dispatch, getState) => {
@@ -39,9 +37,9 @@ export function fetchAllUsers() {
         //     dispatch(usersAll_X());
         //   })
         //   .then(() => {
-        //     return {
-        //       type: null
-        //     }; // 'Empty' action object
+             return {
+               type: null
+             };
         //   });
     }
 }
