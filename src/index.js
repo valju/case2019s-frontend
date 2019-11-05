@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
+import { theme } from "./stylings/theme/theme";
+import { ThemeProvider } from "@material-ui/core";
 
 const store = createStore(
   rootReducer(),
@@ -18,7 +20,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById("root")
 );
