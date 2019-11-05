@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import Users from "./views/userViews/Users";
+import Navigator from './router/Navigator';
 
 function App() {
   return (
     <div className="App">
       <h1>Testing</h1>
-      <Users />
+      <Navigator />
     </div>
   );
 }
