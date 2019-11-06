@@ -16,16 +16,15 @@ function ListItemLink(props) {
 
 export const mainListItems = (
   <div>
-    <Link to='/home' style={{textDecoration:'none', color:'black'}}>
+    <Link to='/home' style={{ textDecoration: 'none', color: 'black' }}>
       <ListItemLink>
         <ListItemIcon>
           <HomeIcon />
-
         </ListItemIcon>
-        <ListItemText primary="Home"/>
+        <ListItemText primary="Home" />
       </ListItemLink>
     </Link>
-    <Link to='/users' style={{textDecoration:'none', color:'black'}} >
+    <Link to='/users' style={{ textDecoration: 'none', color: 'black' }} >
       <ListItemLink>
         <ListItemIcon>
           <CategoryIcon />
