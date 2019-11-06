@@ -4,7 +4,10 @@ const ActionTypes = {
   USERS_ALL_OK: 'USERS_ALL_OK',
   USERS_ALL_X: 'USERS_ALL_X',
 
-  // Next below here
+  // EventTypes
+  EVENTTYPES_ALL_REQ: 'EVENTTYPES_ALL_REQ',
+  EVENTTYPES_ALL_OK: 'EVENTTYPES_ALL_OK',
+  EVENTTYPES_ALL_X: 'EVENTTYPES_ALL_X',
 };
 
 export default ActionTypes;
