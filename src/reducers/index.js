@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 import users from "./users";
+import eventTypes from "./eventTypes";
 
 const rootReducers = () =>
   combineReducers({
-    users
+    users,
+    eventTypes
   });
 
 export default rootReducers;

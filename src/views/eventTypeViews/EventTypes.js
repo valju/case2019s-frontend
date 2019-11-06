@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UserList from '../../components/userComponents/UserList'
+import EventTypeList from '../../components/eventTypeComponents/EventTypeList'
 import { Typography } from "@material-ui/core"
 
 export default class Users extends Component {
@@ -7,9 +7,9 @@ export default class Users extends Component {
     return (
       <div>
         <Typography variant="h2" color="primary">
-          Our Users
+          Our EventTypes
         </Typography>
-        <UserList />
+        <EventTypeList />
       </div>
     )
   }
