@@ -32,6 +32,14 @@ export const mainListItems = (
         <ListItemText primary="Users" />
       </ListItemLink>
     </Link>
+    <Link to='/eventtypes' style={{ textDecoration: 'none', color: 'black' }} >
+      <ListItemLink>
+        <ListItemIcon>
+          <CategoryIcon />
+        </ListItemIcon>
+        <ListItemText primary="EventTypes" />
+      </ListItemLink>
+    </Link>
   </div>
 );
 
