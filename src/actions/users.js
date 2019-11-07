@@ -16,9 +16,9 @@ export const usersAll_X = () => ({
 });
 
 //testing data simulating backend/DB
-const dataUser = [
-    { name: "ashley", id: 1 }, { name: "giang", id: 2 }, { name: "felix", id: 3 }, { name: "blerim", id: 4 }, { name: "tony", id: 5 }, { name: "yujing", id: 6}
-]
+//const dataUser = [
+   // { name: "ashley", id: 1 }, { name: "giang", id: 2 }, { name: "felix", id: 3 }, { name: "blerim", id: 4 }, { name: "tony", id: 5 }, { name: "yujing", id: 6}
+//]
 
 
 export function fetchAllUsers() {
@@ -26,26 +26,29 @@ export function fetchAllUsers() {
 
         dispatch(usersAll_REQ());
 
-        // const ajaxRequest = {
-        //   method: 'get',
-        //   url: API_ROOT + '/users',
-        // };
-        dispatch(usersAll_OK(dataUser))
-        //     axios(ajaxRequest)
-        //   .then((response) => {
-        //     dispatch(usersAll_OK(response.data));
-        //   })
-        //   .catch((error) => {
-        //     console.error("Error: " + error);
-        //     dispatch(usersAll_X());
-        //   })
-        //   .then(() => {
+        const ajaxRequest = {
+        method: 'get',
+        url: API_ROOT + '/user/all',
+        };
+
+
+          axios(ajaxRequest)
+           .then((response) => {
+            dispatch(usersAll_OK(response.data));
+          })
+         .catch((error) => {
+          console.error("Error: " + error);
+        dispatch(usersAll_X());
+        })
+        .then(() => {
              return {
                type: null
              }; // 'Empty' action object
-        //   });
+         });
     }
 }
+
+
 export const userGetById_REQ = (id) => ({
     type: ActionTypes.USER_GETBYID_REQ,
     id: id,
@@ -86,3 +89,4 @@ export function getUser(id) {
         });
     };
   }
+
