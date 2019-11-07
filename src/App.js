@@ -4,7 +4,7 @@ import "./App.css";
 import Navigator from './router/Navigator';
 import Users from "./views/userViews/Users";
 import EventTypes from "./views/eventTypeViews/EventTypes";
-
+import UrgencyType from "./views/urgencyTypeViews/UrgencyTypes"
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Navigator />
       <Users />
       <EventTypes />
+      <UrgencyType/>
     </div>
   );
 }
