@@ -7,7 +7,7 @@ export default class UserDetailsView extends Component {
     return (
       <div>
         <h2>User Details</h2>
-        <UserDetails id={this.props.match.params.id}/>
+        <UserDetails id={this.props.match.params.id} />
       </div>
     );
   }

@@ -5,7 +5,6 @@ import eventTypes from "./eventTypes";
 import urgencyTypes from './urgencyTypes';
 import locationTypes from "./locationTypes";
 
-
 const rootReducers = () =>
   combineReducers({
     users,
