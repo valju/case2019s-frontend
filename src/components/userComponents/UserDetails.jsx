@@ -4,7 +4,6 @@ import { getUser } from '../../actions/users';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
 class UserDetails extends Component {
   componentWillMount() {
     this.props.userGetById(this.props.id);
@@ -40,5 +39,4 @@ const mapStateToProps = state => ({
   users: state.users,
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(UserDetails);
-
+export default connect(mapStateToProps, mapDispatchToProps)(UserDetails);
