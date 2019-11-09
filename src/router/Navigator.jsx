@@ -7,35 +7,39 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Users from '../views/userViews/Users';
 import UserDetailsView from '../views/userViews/UserDetailsView';
 import Home from '../views/userViews/Home';
+import EventTypes from '../views/eventTypeViews/EventTypes';
+import LocationTypes from '../views/listTypeViews/LocationTypes';
 
 class Navigator extends Component {
 
-    render() {
-      return (
-        <Router>
+  render() {
+    return (
+      <Router>
+        <div>
           <div>
-            <div>
-                <h4>Index</h4>
-                <Divider />
-                <List>{mainListItems}</List>
-                <Divider />
-                <List>{secondaryListItems}</List>
-            </div>
-
-            <Switch>
-              { /* <Route exact path="/" component={HomeView} /> */ }
-              <Route exact path="/" component={Users} />
-              { /* <Route exact path="/home" component={HomeView} /> */ }
-              <Route exact path="/home" component={Home} />
-              <Route path="/users" component={Users} />
-              <Route exact path="/users/:id" component={UserDetailsView} />
-              <Route render={ () => <h1>Page not found</h1>} />
-            </Switch>
-
+            <h4>Index</h4>
+            <Divider />
+            <List>{mainListItems}</List>
+            <Divider />
+            <List>{secondaryListItems}</List>
           </div>
-        </Router>
-      );
-    }
+
+          <Switch>
+            { /* <Route exact path="/" component={HomeView} /> */}
+            <Route exact path="/" component={Users} />
+            { /* <Route exact path="/home" component={HomeView} /> */}
+            <Route exact path="/home" component={Home} />
+            <Route path="/users" component={Users} />
+            <Route exact path="/users/:id" component={UserDetailsView} />
+            <Route path="/eventtypes" component={EventTypes} />
+            <Route path="/locationtypes" component={LocationTypes} />
+            <Route render={() => <h1>Page not found</h1>} />
+          </Switch>
+
+        </div>
+      </Router>
+    );
   }
+}
 
 export default Navigator;

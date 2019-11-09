@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import EventTypeList from '../../components/eventTypeComponents/EventTypeList'
+import LocationTypeList from '../../components/locationTypeComponents/LocationTypeList'
 import { Typography } from "@material-ui/core"
 
-export default class EventTypes extends Component {
+export default class LocationTypes extends Component {
   render() {
     return (
       <div>
         <Typography variant="h2" color="primary">
-          Our EventTypes
+          Our LocationTypes
         </Typography>
-        <EventTypeList />
+        <LocationTypeList />
       </div>
     )
   }

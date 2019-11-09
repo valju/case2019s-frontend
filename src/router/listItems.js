@@ -11,7 +11,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
+  return <ListItem button {...props} />;
 }
 
 export const mainListItems = (
@@ -30,6 +30,22 @@ export const mainListItems = (
           <CategoryIcon />
         </ListItemIcon>
         <ListItemText primary="Users" />
+      </ListItemLink>
+    </Link>
+    <Link to='/eventtypes' style={{ textDecoration: 'none', color: 'black' }} >
+      <ListItemLink>
+        <ListItemIcon>
+          <CategoryIcon />
+        </ListItemIcon>
+        <ListItemText primary="EventTypes" />
+      </ListItemLink>
+    </Link>
+    <Link to='/locationtypes' style={{ textDecoration: 'none', color: 'black' }} >
+      <ListItemLink>
+        <ListItemIcon>
+          <CategoryIcon />
+        </ListItemIcon>
+        <ListItemText primary="LocationTypes" />
       </ListItemLink>
     </Link>
   </div>
