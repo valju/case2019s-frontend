@@ -11,7 +11,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
+  return <ListItem button {...props} />;
 }
 
 export const mainListItems = (

@@ -11,7 +11,7 @@ const paletteRed = { primary: red };
 export const theme = createMuiTheme({
   palette: paletteRed,
   typography: {
-    fontSize: "10rem",
+    fontSize: 10,
     fontFamily: "'Open Sans', sans-serif'"
   }
 });
