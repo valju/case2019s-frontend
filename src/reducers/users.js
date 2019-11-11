@@ -2,7 +2,8 @@ import ActionTypes from "../actions/ActionTypes";
 
 export const initialState = {
   isLoading: false,
-  userList: []
+  userList: [],
+  userCurrent: null,
 };
 
 export default function users(state = initialState, action) {
@@ -23,6 +24,24 @@ export default function users(state = initialState, action) {
         ...state,
         isLoading: false
       }
+
+    case ActionTypes.USER_GETBYID_REQ:
+      return {
+        ...state,
+        isLoading: true
+      }
+    case ActionTypes.USER_GETBYID_OK:
+      return {
+        ...state,
+        userCurrent: action.user,
+        isLoading: false,
+      }
+    case ActionTypes.USER_GETBYID_X:
+      return {
+        ...state,
+        isLoading: false
+      }
+
     case null:
       return state;
     default:

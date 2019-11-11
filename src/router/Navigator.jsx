@@ -29,7 +29,7 @@ class Navigator extends Component {
             <Route exact path="/" component={Users} />
             { /* <Route exact path="/home" component={HomeView} /> */}
             <Route exact path="/home" component={Home} />
-            <Route path="/users" component={Users} />
+            <Route exact path="/users" component={Users} />
             <Route exact path="/users/:id" component={UserDetailsView} />
             <Route path="/eventtypes" component={EventTypes} />
             <Route path="/locationtypes" component={LocationTypes} />
