@@ -8,7 +8,7 @@ import Users from '../views/userViews/Users';
 import UserDetailsView from '../views/userViews/UserDetailsView';
 import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
-import LocationTypes from '../views/listTypeViews/LocationTypes';
+import LocationTypes from '../views/locationTypeViews/LocationTypes';
 
 class Navigator extends Component {
 
