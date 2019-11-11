@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import { mainListItems, secondaryListItems } from './listItems';
 import Users from '../views/userViews/Users';
 import UserDetailsView from '../views/userViews/UserDetailsView';
-import Home from '../views/userViews/Home';
+import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
 import LocationTypes from '../views/listTypeViews/LocationTypes';
 
@@ -25,9 +25,8 @@ class Navigator extends Component {
           </div>
 
           <Switch>
-            { /* <Route exact path="/" component={HomeView} /> */}
-            <Route exact path="/" component={Users} />
-            { /* <Route exact path="/home" component={HomeView} /> */}
+            <Route exact path="/" component={Home} />
+            { /* <Route exact path="/" component={Users} /> */ }
             <Route exact path="/home" component={Home} />
             <Route exact path="/users" component={Users} />
             <Route exact path="/users/:id" component={UserDetailsView} />
