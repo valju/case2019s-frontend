@@ -6,7 +6,7 @@ export default class LocationTypes extends Component {
   render() {
     return (
       <div>
-        <Typography variant="h2" color="primary">
+        <Typography variant="h2">
           Our LocationTypes
         </Typography>
         <LocationTypeList />

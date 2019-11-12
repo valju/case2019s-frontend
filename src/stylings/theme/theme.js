@@ -54,6 +54,9 @@ export const redPalette = {
   warning: { main: "#FF6600" },
   information: { main: "#B97446" },
   success: { main: "#CC9900" },
+  textDecoration : {
+    main: 'none',
+  },
 
 };
 
@@ -121,19 +124,27 @@ const theme = createMuiTheme({
     contrastThreshold: 4,
     tonalOffset: 0.1,
 
-  },
 
-  /*
+  },
   typography: {
       // Project's possible main font definitions here, otherwise Material-UI defaults
-  },
-  */
+      body2:{
+        color: selectedPalette.primary.main,
 
-  /*
-  overrides:{
-    // Put here any possible changes to MUI default styles
+      },
+     /*  a:{
+        color: selectedPalette.primary.main,
+      } */
+
   },
-  */
+  overrides:{
+    MuiListItemIcon:{
+      root:{
+        color:selectedPalette.primary.main,
+      }
+    }
+  },
+
 
 });
 
