@@ -9,8 +9,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import CategoryIcon from '@material-ui/icons/Category';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-
-
 function ListItemLink(props) {
   return <ListItem button component={Link} {...props} />;
 }
