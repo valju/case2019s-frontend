@@ -9,45 +9,36 @@ import HomeIcon from '@material-ui/icons/Home';
 import CategoryIcon from '@material-ui/icons/Category';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-
 function ListItemLink(props) {
-  return <ListItem button {...props} />;
+  return <ListItem button component={Link} {...props} />;
 }
 
 export const mainListItems = (
   <div>
-    <Link to='/home' style={{ textDecoration: 'none', color: 'black' }}>
-      <ListItemLink>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-      </ListItemLink>
-    </Link>
-    <Link to='/users' style={{ textDecoration: 'none', color: 'black' }} >
-      <ListItemLink>
-        <ListItemIcon>
-          <CategoryIcon />
-        </ListItemIcon>
-        <ListItemText primary="Users" />
-      </ListItemLink>
-    </Link>
-    <Link to='/eventtypes' style={{ textDecoration: 'none', color: 'black' }} >
-      <ListItemLink>
-        <ListItemIcon>
-          <CategoryIcon />
-        </ListItemIcon>
-        <ListItemText primary="EventTypes" />
-      </ListItemLink>
-    </Link>
-    <Link to='/locationtypes' style={{ textDecoration: 'none', color: 'black' }} >
-      <ListItemLink>
-        <ListItemIcon>
-          <CategoryIcon />
-        </ListItemIcon>
-        <ListItemText primary="LocationTypes" />
-      </ListItemLink>
-    </Link>
+    <ListItemLink to='/home'>
+      <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary="Home" />
+    </ListItemLink>
+    <ListItemLink to='/users'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="Users" />
+    </ListItemLink>
+    <ListItemLink to='/eventtypes'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="EventTypes" />
+    </ListItemLink>
+    <ListItemLink to='/locationtypes'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="Location types" />
+    </ListItemLink>
   </div>
 );
 
@@ -61,3 +52,5 @@ export const secondaryListItems = (
     </ListItem>
   </div>
 );
+
+//style={{ textDecoration: 'none', color: 'black' }}
