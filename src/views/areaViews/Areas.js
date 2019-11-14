@@ -7,7 +7,7 @@ export default class Areas extends Component {
     return (
       <div>
         <Typography variant="h2" color="primary">
-          Our EventTypes
+          Areas
         </Typography>
         <AreaList />
       </div>
