@@ -9,6 +9,8 @@ import UserDetailsView from '../views/userViews/UserDetailsView';
 import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
 import LocationTypes from '../views/locationTypeViews/LocationTypes';
+import Locations from '../views/locationViews/Locations';
+
 
 class Navigator extends Component {
 
@@ -32,6 +34,7 @@ class Navigator extends Component {
             <Route exact path="/users/:id" component={UserDetailsView} />
             <Route path="/eventtypes" component={EventTypes} />
             <Route path="/locationtypes" component={LocationTypes} />
+            <Route path="/locations" component={Locations} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
 
