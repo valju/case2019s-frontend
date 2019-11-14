@@ -21,17 +21,12 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItemLink>
+
     <ListItemLink to='/areas'>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Areas" />
-    </ListItemLink>
-    <ListItemLink to='/users'>
-      <ListItemIcon>
-        <CategoryIcon />
-      </ListItemIcon>
-      <ListItemText primary="Users" />
     </ListItemLink>
     <ListItemLink to='/eventtypes'>
       <ListItemIcon>
@@ -39,23 +34,29 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="EventTypes" />
     </ListItemLink>
-    <ListItemLink to='/locationtypes'>
-      <ListItemIcon>
-        <CategoryIcon />
-      </ListItemIcon>
-      <ListItemText primary="Location types" />
-    </ListItemLink>
     <ListItemLink to='/locations'>
       <ListItemIcon>
         <CategoryIcon />
       </ListItemIcon>
       <ListItemText primary="Locations" />
     </ListItemLink>
+    <ListItemLink to='/locationtypes'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="Location types" />
+    </ListItemLink>
     <ListItemLink to='/urgencytypes'>
       <ListItemIcon>
         <CategoryIcon />
       </ListItemIcon>
       <ListItemText primary="UrgencyTypes" />
+    </ListItemLink>
+    <ListItemLink to='/users'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="Users" />
     </ListItemLink>
   </div>
 );

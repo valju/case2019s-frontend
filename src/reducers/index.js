@@ -9,12 +9,12 @@ import locations from "./locations";
 
 const rootReducers = () =>
   combineReducers({
-    users,
-    eventTypes,
-    urgencyTypes,
-    locationTypes,
     areas,
+    eventTypes,
     locations,
+    locationTypes,
+    urgencyTypes,
+    users,
   });
 
 export default rootReducers;
