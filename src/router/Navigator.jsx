@@ -10,6 +10,7 @@ import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
 import LocationTypes from '../views/locationTypeViews/LocationTypes';
 import Locations from '../views/locationViews/Locations';
+import UrgencyTypes from '../views/urgencyTypeViews/UrgencyTypes';
 
 
 class Navigator extends Component {
@@ -35,6 +36,7 @@ class Navigator extends Component {
             <Route path="/eventtypes" component={EventTypes} />
             <Route path="/locationtypes" component={LocationTypes} />
             <Route path="/locations" component={Locations} />
+            <Route path="/urgencytypes" component={UrgencyTypes} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
 
