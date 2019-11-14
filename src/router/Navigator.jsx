@@ -28,7 +28,7 @@ class Navigator extends Component {
           </div>
           <Switch>
             <Route exact path="/" component={Home} />
-            { /* <Route exact path="/" component={Users} /> */}
+            { /* <Route exact path="/" component={Users} /> */ }
             <Route exact path="/home" component={Home} />
             <Route path="/areas" component={Areas} />
             <Route path="/eventtypes" component={EventTypes} />
