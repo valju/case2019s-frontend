@@ -10,7 +10,7 @@ class AreaList extends Component {
 
   render() {
     return <div>
-      <h3>EventType List</h3>
+      <h3>Area Type List</h3>
       <ol>{
         this.props.areas.areaList.map(item =>
           <AreaListItem key={item.id} item={item} />)
