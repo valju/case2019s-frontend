@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchAllAreas } from '../../actions/areasType'
+import { fetchAllAreas } from '../../actions/areaTypes'
 import AreaListItem from "./AreaListItem";
 
 class AreaList extends Component {
