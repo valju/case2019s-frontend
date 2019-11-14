@@ -45,6 +45,18 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Location types" />
     </ListItemLink>
+    <ListItemLink to='/locations'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="Locations" />
+    </ListItemLink>
+    <ListItemLink to='/urgencytypes'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="UrgencyTypes" />
+    </ListItemLink>
   </div>
 );
 
