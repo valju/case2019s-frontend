@@ -1,5 +1,9 @@
 const ActionTypes = {
+
   // area
+  AREAS_ALL_REQ: 'AREAS_ALL_REQ',
+  AREAS_ALL_OK: 'AREAS_ALL_OK',
+  AREAS_ALL_X: 'AREAS_ALL_X',
 
   // areaUser
 
@@ -11,6 +15,9 @@ const ActionTypes = {
   EVENTTYPES_ALL_X: 'EVENTTYPES_ALL_X',
 
   // location
+  LOCATIONS_ALL_REQ: 'LOCATIONS_ALL_REQ',
+  LOCATIONS_ALL_OK: 'LOCATIONS_ALL_OK',
+  LOCATIONS_ALL_X: 'LOCATIONS_ALL_X',
 
   // locationType
   LOCATIONTYPES_ALL_REQ: 'LOCATIONTYPES_ALL_REQ',

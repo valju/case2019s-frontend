@@ -4,6 +4,8 @@ import users from "./users";
 import eventTypes from "./eventTypes";
 import urgencyTypes from './urgencyTypes';
 import locationTypes from "./locationTypes";
+import areas from './areas';
+import locations from "./locations";
 
 const rootReducers = () =>
   combineReducers({
@@ -11,6 +13,8 @@ const rootReducers = () =>
     eventTypes,
     urgencyTypes,
     locationTypes,
+    areas,
+    locations,
   });
 
 export default rootReducers;
