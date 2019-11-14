@@ -21,6 +21,12 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItemLink>
+    <ListItemLink to='/areas'>
+      <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary="Areas" />
+    </ListItemLink>
     <ListItemLink to='/users'>
       <ListItemIcon>
         <CategoryIcon />

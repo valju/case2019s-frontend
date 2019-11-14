@@ -1,5 +1,9 @@
 const ActionTypes = {
+
   // area
+  AREAS_ALL_REQ: 'AREAS_ALL_REQ',
+  AREAS_ALL_OK: 'AREAS_ALL_OK',
+  AREAS_ALL_X: 'AREAS_ALL_X',
 
   // areaUser
 
