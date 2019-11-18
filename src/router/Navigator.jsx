@@ -12,9 +12,7 @@ import LocationTypes from '../views/locationTypeViews/LocationTypes';
 import Areas from '../views/areaViews/Areas';
 import Locations from '../views/locationViews/Locations';
 import UrgencyTypes from '../views/urgencyTypeViews/UrgencyTypes';
-
 import AreaUsers from '../views/areaUserViews/AreaUsers';
-
 
 class Navigator extends Component {
 
