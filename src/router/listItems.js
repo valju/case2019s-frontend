@@ -58,6 +58,14 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Users" />
     </ListItemLink>
+
+    <ListItemLink to='/areausers'>
+      <ListItemIcon>
+        <CategoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="AreaUser" />
+    </ListItemLink>
+
   </div>
 );
 
