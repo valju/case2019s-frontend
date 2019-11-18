@@ -13,6 +13,9 @@ import Areas from '../views/areaViews/Areas';
 import Locations from '../views/locationViews/Locations';
 import UrgencyTypes from '../views/urgencyTypeViews/UrgencyTypes';
 
+import AreaUsers from '../views/areaUserViews/AreaUsers';
+
+
 class Navigator extends Component {
 
   render() {
@@ -37,6 +40,7 @@ class Navigator extends Component {
             <Route path="/urgencytypes" component={UrgencyTypes} />
             <Route exact path="/users" component={Users} />
             <Route exact path="/users/:id" component={UserDetailsView} />
+            <Route path="/areausers" component={AreaUsers} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </div>
