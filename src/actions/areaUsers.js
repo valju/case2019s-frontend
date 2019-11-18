@@ -43,16 +43,6 @@ export function fetchAllAreaUser() {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 // Idea_member get by (areaId, userId)
 export const areaUserById_REQ = () => ({
   type: ActionTypes.AREA_USER_GETBYID_REQ,
@@ -89,4 +79,3 @@ export function getAreaUserById(areaId, userId) {
     })
   }
 }
-
