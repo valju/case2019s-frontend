@@ -98,7 +98,7 @@ export const yellowPalette = {
 
 };
 
-const selectedPalette = defaultPalette;  //  defaultPalette | redPalette | yellowPalette
+const selectedPalette = redPalette;  //  defaultPalette | redPalette | yellowPalette
 /* redPalette and yellowPalette are technical tools for finding
 any hard-coded elements/colors = not
  using Material UI components and/or the theme colors
