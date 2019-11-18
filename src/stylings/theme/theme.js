@@ -10,6 +10,9 @@ export const defaultPalette = {
     main: "#999999",
     light: "#BBBBBB"
   },
+  text:{
+    secondary: "#999999",
+  },
 
   background: {
     paper: "#DDEEFF",
@@ -37,6 +40,9 @@ export const redPalette = {
   secondary: {
     main: "#FF8888",
     light: "#F44336"
+  },
+  text:{
+    secondary: "#FF8888",
   },
 
   background: {
@@ -70,6 +76,9 @@ export const yellowPalette = {
     main: "#FFFF99",
     light: "#FFFFAA"
   },
+  text: {
+    secondary:"#FFFF99",
+  },
 
   background: {
     paper: "#FFFFE6",
@@ -89,7 +98,7 @@ export const yellowPalette = {
 
 };
 
-const selectedPalette = redPalette;  //  defaultPalette | redPalette | yellowPalette
+const selectedPalette = defaultPalette;  //  defaultPalette | redPalette | yellowPalette
 /* redPalette and yellowPalette are technical tools for finding
 any hard-coded elements/colors = not
  using Material UI components and/or the theme colors
@@ -104,7 +113,14 @@ const theme = createMuiTheme({
       light: selectedPalette.primary.light,
     },
 
-    secondary: { main: selectedPalette.secondary.main, },
+    secondary: {
+      main: selectedPalette.secondary.main,
+      light: selectedPalette.secondary.light,
+     },
+
+     text:{
+       secondary: selectedPalette.text.secondary,
+     },
 
     background: {
       paper: selectedPalette.background.paper,
