@@ -10,6 +10,9 @@ export const defaultPalette = {
     main: "#999999",
     light: "#BBBBBB"
   },
+  text:{
+    secondary: "#999999",
+  },
 
   background: {
     paper: "#DDEEFF",
@@ -37,6 +40,9 @@ export const redPalette = {
   secondary: {
     main: "#FF8888",
     light: "#F44336"
+  },
+  text:{
+    secondary: "#FF8888",
   },
 
   background: {
@@ -69,6 +75,9 @@ export const yellowPalette = {
   secondary: {
     main: "#FFFF99",
     light: "#FFFFAA"
+  },
+  text: {
+    secondary:"#FFFF99",
   },
 
   background: {
@@ -104,7 +113,14 @@ const theme = createMuiTheme({
       light: selectedPalette.primary.light,
     },
 
-    secondary: { main: selectedPalette.secondary.main, },
+    secondary: {
+      main: selectedPalette.secondary.main,
+      light: selectedPalette.secondary.light,
+     },
+
+     text:{
+       secondary: selectedPalette.text.secondary,
+     },
 
     background: {
       paper: selectedPalette.background.paper,

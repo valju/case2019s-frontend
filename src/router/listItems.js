@@ -19,7 +19,7 @@ export const mainListItems = (
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
-      <ListItemText primary="Home" />
+      <ListItemText primary="Home" secondary='School'/>
     </ListItemLink>
 
     <ListItemLink to='/areas'>
