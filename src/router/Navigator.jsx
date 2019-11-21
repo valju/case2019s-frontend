@@ -8,6 +8,7 @@ import Users from '../views/userViews/Users';
 import UserDetailsView from '../views/userViews/UserDetailsView';
 import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
+import EventTypeDetailsView from '../views/eventTypeViews/EventTypeDetailsView';
 import LocationTypes from '../views/locationTypeViews/LocationTypes';
 import Areas from '../views/areaViews/Areas';
 import Locations from '../views/locationViews/Locations';
@@ -30,10 +31,11 @@ class Navigator extends Component {
           </div>
           <Switch>
             <Route exact path="/" component={Home} />
-            { /* <Route exact path="/" component={Users} /> */ }
+            { /* <Route exact path="/" component={Users} /> */}
             <Route exact path="/home" component={Home} />
             <Route path="/areas" component={Areas} />
             <Route path="/eventtypes" component={EventTypes} />
+            <Route exact path="/eventtype/:id" component={EventTypeDetailsView} />
             <Route exact path="/locations" component={Locations} />
             <Route exact path="/locations/:id" component={LocationDetailsView} />
             <Route path="/locationtypes" component={LocationTypes} />
