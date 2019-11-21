@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserItem from './UserItem';
+
 import { getUser } from '../../actions/users';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,7 @@ class UserDetails extends Component {
           <p>Waiting server response. Activity indicator could go here.</p>
         ) : (
             <div>
-              <UserItem item={this.props.users.userCurrent} />
+              {/*<UserItem item={this.props.users.userCurrent} />*/}
               <Link to={`/user/update/${this.props.users.userCurrent.id}`}>Update</Link>
               <br />
               {!this.props.users.userCurrent.isAdmin ?
@@ -28,7 +28,7 @@ class UserDetails extends Component {
                 <Icon><BuildIcon /></Icon>
               }
             </div>
-        )}
+          )}
 
         <p>
           <Link to='/users'>Back</Link>
