@@ -57,7 +57,6 @@ export const locationGetById_X = () => ({
 export function getLocation(id) {
   return async (dispatch, getState) => {
     dispatch(locationGetById_REQ(id));
-    console.dir("Get location with this id: " + id);
 
     const ajaxRequest = {
       method: 'get',
@@ -94,7 +93,6 @@ export const locationDelete_X = () => ({
 export function deleteLocation(id) {
   return async (dispatch, getState) => {
     dispatch(locationDelete_REQ(id));
-    console.dir("Delete by this id: " + id);
 
     const ajaxRequest = {
       method: 'delete',
