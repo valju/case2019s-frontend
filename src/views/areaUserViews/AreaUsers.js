@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AreaList from '../../components/areaComponents/AreaList';
+import AreaUserList from '../../components/areaUserComponents/AreaUserList';
 import { Typography } from "@material-ui/core"
 
 export default class AreaUsers extends Component {
@@ -9,7 +9,7 @@ export default class AreaUsers extends Component {
         <Typography variant="h2" color="primary">
         AreaUsers
         </Typography>
-        <AreaList />
+        <AreaUserList />
       </div>
     )
   }

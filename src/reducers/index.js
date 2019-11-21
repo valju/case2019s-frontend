@@ -6,7 +6,7 @@ import urgencyTypes from './urgencyTypes';
 import locationTypes from "./locationTypes";
 import areas from './areas';
 import locations from "./locations";
-
+import areaUsers from "./areaUsers";
 const rootReducers = () =>
   combineReducers({
     areas,
@@ -15,6 +15,7 @@ const rootReducers = () =>
     locationTypes,
     urgencyTypes,
     users,
+    areaUsers
   });
 
 export default rootReducers;

@@ -63,7 +63,7 @@ export const mainListItems = (
       <ListItemIcon>
         <CategoryIcon />
       </ListItemIcon>
-      <ListItemText primary="AreaUser" />
+      <ListItemText primary="AreaUsers" />
     </ListItemLink>
 
   </div>

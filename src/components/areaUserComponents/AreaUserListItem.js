@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import AreaItem from './AreaUserItem';
+import React, { Component } from 'react'
+import AreaUserItem from './AreaUserItem';
 
 export default class AreaUserListItem extends Component {
   render() {
@@ -11,4 +11,3 @@ export default class AreaUserListItem extends Component {
     )
   }
 }
-export default AreaUserListItem;

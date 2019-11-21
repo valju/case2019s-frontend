@@ -6,7 +6,9 @@ const ActionTypes = {
   AREAS_ALL_X: 'AREAS_ALL_X',
 
   // areaUser
-
+  AREA_USER_ALL_REQ: 'AREA_USER_ALL_REQ',
+  AREA_USER_ALL_OK: 'AREA_USER_ALL_OK',
+  AREA_USER_ALL_X: 'AREA_USER_ALL_X',
   // event
 
   // eventType

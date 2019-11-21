@@ -1,14 +1,11 @@
-class AreaUserItem extends Component {
+import React, { Component } from 'react'
+export default class AreaUserItem extends Component {
   render() {
-    const { firstName, lastName, name } = this.props.item
+    const { firstName, lastName, name, areaId, userId } = this.props.item
     return (
-
-          <li>
-        Area "{name}" of User {firstName}, {lastName}, {email}
-        <hr />
-      </li>
-      );
+      <div>
+        {areaId}, {userId}, {name}, {firstName} {lastName}
+      </div>
+    )
   }
 }
-
-export default AreaUserItem;
