@@ -81,7 +81,6 @@ export function getArea(id) {
   };
 }
 
-
 // DELETE AREA
 export const areaDelete_REQ = (id) => ({
   type: ActionTypes.AREA_DELETE_REQ,
@@ -94,12 +93,10 @@ export const areaDelete_X = () => ({
   type: ActionTypes.AREA_DELETE_X,
 });
 
-
 export function deleteArea(id) {
   return async (dispatch, getState) => {
 
     dispatch(areaDelete_REQ(id));
-
     console.dir("Area delete by this id: " + id);
 
     const ajaxRequest = {
