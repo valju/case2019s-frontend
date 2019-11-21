@@ -8,8 +8,6 @@ class AreaDetails extends Component {
   componentDidMount() {
     this.props.areaGetById(this.props.id);
   }
-
-
   render() {
     return(
     <div>
