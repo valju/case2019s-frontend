@@ -14,6 +14,7 @@ import Areas from '../views/areaViews/Areas';
 import Locations from '../views/locationViews/Locations';
 import UrgencyTypes from '../views/urgencyTypeViews/UrgencyTypes';
 import AreaUsers from '../views/areaUserViews/AreaUsers';
+import LocationDetailsView from '../views/locationViews/LocationDetailsView';
 
 class Navigator extends Component {
 
@@ -35,7 +36,8 @@ class Navigator extends Component {
             <Route path="/areas" component={Areas} />
             <Route path="/eventtypes" component={EventTypes} />
             <Route exact path="/eventtype/:id" component={EventTypeDetailsView} />
-            <Route path="/locations" component={Locations} />
+            <Route exact path="/locations" component={Locations} />
+            <Route exact path="/locations/:id" component={LocationDetailsView} />
             <Route path="/locationtypes" component={LocationTypes} />
             <Route path="/urgencytypes" component={UrgencyTypes} />
             <Route exact path="/users" component={Users} />
