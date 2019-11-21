@@ -50,10 +50,6 @@ const UserList = () => {
         <TableBody>
           {users.userList.map(user =>
             <TableRow
-              onClick={e => {
-                e.preventDefault()
-                history.push(`users/${user.id}`)
-              }}
               hover key={user.id} >
               {getKeyValues(user).map((value, i) => {
                 return (
@@ -66,7 +62,7 @@ const UserList = () => {
                 <Button
                   onClick={e => {
                     e.preventDefault()
-                    history.push(`users/${user.id}`)
+                    history.push(`/users/${user.id}`)
                   }}
                   variant="contained" color="secondary" size="small">Edit</Button>
               </TableCell>
