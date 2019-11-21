@@ -35,7 +35,7 @@ class Navigator extends Component {
             { /* <Route exact path="/" component={Users} /> */}
             <Route exact path="/home" component={Home} />
             <Route exact path="/areas" component={Areas} />
-            <Route path="/area/:id" component={AreaDetailsView} />
+            <Route exact path="/area/:id" component={AreaDetailsView} />
             <Route path="/eventtypes" component={EventTypes} />
             <Route exact path="/eventtype/:id" component={EventTypeDetailsView} />
             <Route exact path="/locations" component={Locations} />
