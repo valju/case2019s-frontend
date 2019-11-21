@@ -14,25 +14,13 @@ const UserList = () => {
   const dispatch = useDispatch()
   let history = useHistory()
   const users = useSelector(state => state.users)
-  const [keyNames, setKeyNames] = React.useState([])
+
   const classes = useTableStyles()
 
   useEffect(() => {
     dispatch(fetchAllUsers())
   }, [dispatch])
 
-  console.log("userList", users)
-  //Lazy way to display data
-  useEffect(() => {
-    if (!users.isLoading) {
-      setKeyNames(Object.keys(users.userList[0])) // get all the property name of an object, return array
-    }
-  }, [users.isLoading, users.userList])
-
-
-  function getKeyValues(obj) {
-    return Object.values(obj)
-  }
   return (
     <div>
       <h3>User List</h3>
@@ -40,33 +28,22 @@ const UserList = () => {
       <Table className={classes.root} stickyHeader aria-label="User table">
         <TableHead >
           <TableRow >
-            {keyNames.map((name, i) =>
-              <TableCell key={i} variant='head'>
-                {name.toUpperCase()}
-              </TableCell>
-            )}
+            <TableCell variant='head'> First Name</TableCell>
+            <TableCell variant='head'>Last Name</TableCell>
+            <TableCell variant='head'>Email</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.userList.map(user =>
-            <TableRow
-              onClick={e => {
-                e.preventDefault()
-                history.push(`users/${user.id}`)
-              }}
-              hover key={user.id} >
-              {getKeyValues(user).map((value, i) => {
-                return (
-                  <TableCell key={i} variant='body'>
-                    {value}
-                  </TableCell>
-                )
-              })}
+          {users.userList.map(({ id, firstName, lastName, email }) =>
+            <TableRow key={id}>
+              <TableCell variant='head'> {firstName}</TableCell>
+              <TableCell variant='head'>{lastName}</TableCell>
+              <TableCell variant='head'>{email}</TableCell>
               <TableCell padding="checkbox">
                 <Button
                   onClick={e => {
                     e.preventDefault()
-                    history.push(`users/${user.id}`)
+                    history.push(`/users/${id}`)
                   }}
                   variant="contained" color="secondary" size="small">Edit</Button>
               </TableCell>
