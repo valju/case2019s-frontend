@@ -40,3 +40,80 @@ export function fetchAllLocations() {
       });
   }
 }
+
+export const locationGetById_REQ = (id) => ({
+  type: ActionTypes.LOCATION_GETBYID_REQ,
+  id: id,
+});
+
+export const locationGetById_OK = (location) => ({
+  type: ActionTypes.LOCATION_GETBYID_OK,
+  location: location,
+});
+export const locationGetById_X = () => ({
+  type: ActionTypes.LOCATION_GETBYID_X,
+});
+
+export function getLocation(id) {
+  return async (dispatch, getState) => {
+    dispatch(locationGetById_REQ(id));
+    console.dir("Get location with this id: " + id);
+
+    const ajaxRequest = {
+      method: 'get',
+      url: API_ROOT + '/location/' + id
+    };
+
+    axios(ajaxRequest)
+      .then((response) => {
+        dispatch(locationGetById_OK(response.data[0]));
+      })
+      .catch((error) => {
+        console.error("Error: " + error);
+        dispatch(locationGetById_X());
+      })
+      .then(() => {
+        return {
+          type: null
+        };
+      });
+  };
+}
+
+export const locationDelete_REQ = (id) => ({
+  type: ActionTypes.LOCATION_DELETE_REQ,
+  id: id,
+});
+export const locationDelete_OK = () => ({
+  type: ActionTypes.LOCATION_DELETE_OK,
+});
+export const locationDelete_X = () => ({
+  type: ActionTypes.LOCATION_DELETE_X,
+});
+
+export function deleteLocation(id) {
+  return async (dispatch, getState) => {
+    dispatch(locationDelete_REQ(id));
+    console.dir("Delete by this id: " + id);
+
+    const ajaxRequest = {
+      method: 'delete',
+      url: API_ROOT + '/location/' + id,
+    };
+
+    axios(ajaxRequest)
+      .then((response) => {
+        dispatch(locationDelete_OK());
+        dispatch(fetchAllLocations());
+      })
+      .catch((error) => {
+        console.error("Error: " + error);
+        dispatch(locationDelete_X());
+      })
+      .then(() => {
+        return {
+          type: null
+        }
+      });
+  }
+};

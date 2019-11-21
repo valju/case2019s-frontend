@@ -2,7 +2,8 @@ import ActionTypes from "../actions/ActionTypes";
 
 export const initialState = {
   isLoading: false,
-  locationList: []
+  locationList: [],
+  locationCurrent: null,
 };
 
 export default function locations(state = initialState, action) {
@@ -23,9 +24,41 @@ export default function locations(state = initialState, action) {
         ...state,
         isLoading: false
       }
+    case ActionTypes.LOCATION_GETBYID_REQ:
+      return {
+        ...state,
+        isLoading: true
+      }
+    case ActionTypes.LOCATION_GETBYID_OK:
+      return {
+        ...state,
+        locationCurrent: action.location,
+        isLoading: false,
+      }
+    case ActionTypes.LOCATION_GETBYID_X:
+      return {
+        ...state,
+        isLoading: false
+      }
+    case ActionTypes.LOCATION_DELETE_REQ:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case ActionTypes.LOCATION_DELETE_OK:
+      return {
+        ...state,
+        isLoading: false,
+      };
+    case ActionTypes.LOCATION_DELETE_X:
+      return {
+        ...state,
+        isLoading: false,
+      };
     case null:
       return state;
     default:
       return state;
   }
 }
+
