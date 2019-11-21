@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchAllAreas } from '../../actions/areaTypes'
+import { fetchAllAreas, deleteArea } from '../../actions/areaTypes'
 import AreaListItem from "./AreaListItem";
 
 class AreaList extends Component {
@@ -13,7 +13,11 @@ class AreaList extends Component {
       <h3>Area Type List</h3>
       <ol>{
         this.props.areas.areaList.map(item =>
-          <AreaListItem key={item.id} item={item} />)
+          <AreaListItem
+            key={item.id}
+            item={item}
+            delete={this.props.deleteAreaLocal}
+            />)
       }</ol>
     </div>;
   }
@@ -22,8 +26,10 @@ class AreaList extends Component {
 const mapDispatchToProps = dispatch => ({
   areaFetchAll: () => (
     dispatch(fetchAllAreas())
-  )
-
+  ),
+  deleteAreaLocal: (id) => {
+    dispatch(deleteArea(id))
+  }
 });
 
 const mapStateToProps = state => ({
