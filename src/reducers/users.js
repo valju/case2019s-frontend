@@ -1,7 +1,7 @@
 import ActionTypes from "../actions/ActionTypes";
 
 export const initialState = {
-  isLoading: false,
+  isLoading: true,
   userList: [],
   userCurrent: null,
 };
