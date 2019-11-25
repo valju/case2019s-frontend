@@ -7,6 +7,7 @@ import locationTypes from "./locationTypes";
 import areas from "./areas";
 import locations from "./locations";
 import areaUsers from "./areaUsers";
+
 const rootReducers = () =>
   combineReducers({
     areas,
