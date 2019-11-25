@@ -1,6 +1,6 @@
 import ActionTypes from './ActionTypes';
 import axios from 'axios';
-import { API_ROOT } from '../constants/AppConstants'
+import { API_ROOT } from '../constants/AppConstants';
 
 export const areaUsersAll_REQ = () => ({
   type: ActionTypes.AREA_USER_ALL_REQ,
