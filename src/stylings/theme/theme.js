@@ -10,7 +10,7 @@ export const defaultPalette = {
     main: "#999999",
     light: "#BBBBBB"
   },
-  text:{
+  text: {
     secondary: "#999999",
   },
 
@@ -41,7 +41,7 @@ export const redPalette = {
     main: "#FF8888",
     light: "#F44336"
   },
-  text:{
+  text: {
     secondary: "#FF8888",
   },
 
@@ -60,9 +60,13 @@ export const redPalette = {
   warning: { main: "#FF6600" },
   information: { main: "#B97446" },
   success: { main: "#CC9900" },
-  textDecoration : {
+  textDecoration: {
     main: 'none',
   },
+  typography: {
+    "fontFamily": "Cooper Black"
+
+  }
 
 };
 
@@ -77,7 +81,7 @@ export const yellowPalette = {
     light: "#FFFFAA"
   },
   text: {
-    secondary:"#FFFF99",
+    secondary: "#FFFF99",
   },
 
   background: {
@@ -116,11 +120,11 @@ const theme = createMuiTheme({
     secondary: {
       main: selectedPalette.secondary.main,
       light: selectedPalette.secondary.light,
-     },
+    },
 
-     text:{
-       secondary: selectedPalette.text.secondary,
-     },
+    text: {
+      secondary: selectedPalette.text.secondary,
+    },
 
     background: {
       paper: selectedPalette.background.paper,
@@ -143,20 +147,21 @@ const theme = createMuiTheme({
 
   },
   typography: {
-      // Project's possible main font definitions here, otherwise Material-UI defaults
-      body2:{
-        color: selectedPalette.primary.main,
+    // Project's possible main font definitions here, otherwise Material-UI defaults
+    body2: {
+      color: selectedPalette.primary.main,
 
-      },
-     /*  a:{
-        color: selectedPalette.primary.main,
-      } */
+    },
+    fontFamily: selectedPalette.typography.fontFamily,
+    /*  a:{
+       color: selectedPalette.primary.main,
+     } */
 
   },
-  overrides:{
-    MuiListItemIcon:{
-      root:{
-        color:selectedPalette.primary.main,
+  overrides: {
+    MuiListItemIcon: {
+      root: {
+        color: selectedPalette.primary.main,
       }
     }
   },
