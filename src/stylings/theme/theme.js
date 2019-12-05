@@ -13,22 +13,34 @@ export const defaultPalette = {
   text: {
     secondary: "#999999",
   },
-
   background: {
     paper: "#DDEEFF",
     default: "#FFFFFF"
   },
-
   ourButton: { hoverText: "#3377AA" },
   hover: { main: "#450000" },
   accent: { main: "#88AA00" },
-
 
   // These three are from Material-UI Snackbar documentatation,
   error: { main: "#D32F2F" },
   warning: { main: "#FFA000" },
   information: { main: "#1976D2" },
   success: { main: "#43A047" },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+
+  }
 };
 
 // This is not part of the product as such, a technical test palette
@@ -66,7 +78,7 @@ export const redPalette = {
   typography: {
     "fontFamily": "Cooper Black"
 
-  }
+  },
 
 };
 
