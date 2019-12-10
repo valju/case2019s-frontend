@@ -4,10 +4,11 @@ export const initialState = {
   isLoading: false,
   eventTypeList: [],
   eventTypeSearchList: [],
+  eventTypeIdsFound: [],
   eventTypeCurrent: null
 };
 
-export default function users(state = initialState, action) {
+export default function eventTypes(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.EVENTTYPES_ALL_REQ:
       return {
@@ -76,22 +77,22 @@ export default function users(state = initialState, action) {
         isLoading: false
       };
 
-    // case ActionTypes.EVENTTYPE_UPDATE_REQ:
-    //   return {
-    //     ...state,
-    //     isLoading: true
-    //   };
-    // case ActionTypes.EVENTTYPE_UPDATE_OK:
-    //   return {
-    //     ...state,
-    //     eventTypeCurrent: action.eventType,
-    //     isLoading: false
-    //   };
-    // case ActionTypes.EVENTTYPE_UPDATE_X:
-    //   return {
-    //     ...state,
-    //     isLoading: false
-    //   };
+    case ActionTypes.EVENTTYPE_UPDATE_REQ:
+      return {
+        ...state,
+        isLoading: true
+      };
+    case ActionTypes.EVENTTYPE_UPDATE_OK:
+      return {
+        ...state,
+        eventTypeCurrent: action.eventType,
+        isLoading: false
+      };
+    case ActionTypes.EVENTTYPE_UPDATE_X:
+      return {
+        ...state,
+        isLoading: false
+      };
 
     case null:
       return state;

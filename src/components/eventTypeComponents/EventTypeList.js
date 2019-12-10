@@ -5,7 +5,7 @@ import EventTypeListItem from './EventTypeListItem';
 
 class EventTypeList extends Component {
   componentDidMount() {
-    this.props.eventTypeFetchAll();
+    this.props.eventTypesFetchAll();
   }
 
   render() {
@@ -13,17 +13,16 @@ class EventTypeList extends Component {
       <h3>EventType List</h3>
       <ol>{
         this.props.eventTypes.eventTypeList.map(item =>
-          <EventTypeListItem key={item.id} item={item} />)
+          <EventTypeListItem key={item.id} item={item} delete={this.props.deleteEventTypeLocal} />)
       }</ol>
     </div>;
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  eventTypeFetchAll: () => (
-    dispatch(fetchAllEventTypes())
-  )
-
+  eventTypesFetchAll: () => {
+    dispatch(fetchAllEventTypes());
+  }
 });
 
 const mapStateToProps = state => ({

@@ -4,6 +4,7 @@ import EventTypeDetails from '../../components/eventTypeComponents/EventTypeDeta
 export default class EventTypeDetailsView extends Component {
 
   render() {
+
     return (
       <div>
         <h2>EventType Details</h2>
