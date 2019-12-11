@@ -40,7 +40,7 @@ export function fetchAllEventTypes() {
       });
   }
 };
-// EvenType_SEARCH_REQ
+// EvenTypes_SEARCH_REQ
 export const eventTypesSearch_REQ = (keyword) => ({
   type: ActionTypes.EVENTTYPES_SEARCH_REQ,
   keyword: keyword,
@@ -96,8 +96,7 @@ export function addEventType(eventType) {
 
     dispatch(eventTypeAdd_REQ(eventType));
 
-    // Here would be some async AJAX call with await...
-    // ... or some promises or so
+
     const ajaxRequest = {
       method: 'post',
       url: API_ROOT + '/eventtype',
@@ -139,8 +138,7 @@ export function deleteEventType(id) {
     dispatch(eventTypeDelete_REQ(id));
     console.dir("Delete by this id: " + id);
 
-    // Here would be some async AJAX call with await...
-    // ... or some promises or so
+
     const ajaxRequest = {
       method: 'delete',
       url: API_ROOT + '/eventtype/' + id,
@@ -181,8 +179,6 @@ export function getEventType(id) {
     dispatch(eventTypeGetById_REQ(id));
     console.dir("Get evenType with this id: " + id);
 
-    // Here would be some async AJAX call with await...
-    // ... or some promises or so
     const ajaxRequest = {
       method: 'get',
       url: API_ROOT + '/eventtype/' + id
@@ -204,4 +200,43 @@ export function getEventType(id) {
   };
 }
 
+//eventType UPDATE
+export const eventTypeUpdate_REQ = (eventType) => ({
+  type: ActionTypes.EVENTTYPE_UPDATE_REQ,
+  eventType: eventType,
+});
+export const eventTypeUpdate_OK = (eventType) => ({
+  type: ActionTypes.EVENTTYPE_UPDATE_OK,
+  eventType,
+});
+export const eventTypeUpdate_X = () => ({
+  type: ActionTypes.EVENTTYPE_UPDATE_X,
+});
 
+export function updateEventType(eventType) {
+  return async (dispatch, getState) => {
+    dispatch(eventTypeUpdate_REQ(eventType));
+    console.dir(eventType);
+
+    const ajaxRequest = {
+      method: 'put',
+      url: API_ROOT + '/eventtype/',
+      data: eventType,
+    };
+
+    axios(ajaxRequest)
+      .then((response) => {
+        dispatch(eventTypeUpdate_OK(eventType));
+        dispatch(fetchAllEventTypes());
+      })
+      .catch((error) => {
+        console.error("Error: " + error);
+        dispatch(eventTypeUpdate_X());
+      })
+      .then(() => {
+        return {
+          type: null
+        };
+      });
+  };
+}

@@ -9,11 +9,12 @@ import BuildIcon from '@material-ui/icons/Build';
 import { Icon } from '@material-ui/core';
 
 class EventTypeDetails extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.eventTypeGetById(this.props.id);
   }
 
   render() {
+    console.log(this.props.eventTypes.eventTypeCurrent);
     return (
       <div>
         {(!this.props.eventTypes || !this.props.eventTypes.eventTypeCurrent) ? (
@@ -21,7 +22,7 @@ class EventTypeDetails extends Component {
         ) : (
             <div>
               <EventTypeItem item={this.props.eventTypes.eventTypeCurrent} />
-              {/* <Link to={`/eventType/update/${this.props.eventTypes.eventTypeCurrent.id}`}>Update</Link> */}
+              <Link to={`/eventtype/update/${this.props.eventTypes.eventTypeCurrent.id}`}>Update</Link>
               <br />
               {!this.props.eventTypes.eventTypeCurrent.isAdmin ?
                 <Icon><BrushIcon /></Icon> :
@@ -31,7 +32,7 @@ class EventTypeDetails extends Component {
           )}
 
         <p>
-          <Link to='/eventTypes'>Back</Link>
+          <Link to='/eventtypes'>Back</Link>
         </p>
       </div>
     );

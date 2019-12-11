@@ -8,7 +8,7 @@ class EventTypeAdd extends Component {
     super(props);
     this.state = {
       newEventTypeObject:
-        { name: "", description: "", defaultUrgency: 0 },
+        { name: "", description: "", defaultUrgency: 10 },
     };
   }
 
@@ -27,7 +27,7 @@ class EventTypeAdd extends Component {
     this.setState(
       {
         newEventTypeObject:
-          { name: "", description: "", defaultUrgency: 0 },
+          { name: "", description: "", defaultUrgency: 10 },
       }
     );
   };
@@ -39,10 +39,12 @@ class EventTypeAdd extends Component {
         <p>
           Name: <input id="name" type="text" onChange={this.inputFieldValueChanged} value={this.state.newEventTypeObject.name} /><br />
           Description: <input id="description" type="text" size="50" onChange={this.inputFieldValueChanged} value={this.state.newEventTypeObject.description} /><br />
-          Default Urgency: <select
+          Default Urgency:
+          <select
             id="defaultUrgency"
             onChange={this.inputFieldValueChanged}
-            value={this.state.newEventTypeObject.defaultUrgency}>
+            value={this.state.newEventTypeObject.defaultUrgency}
+          >
             <option value="10">
               10
             </option>

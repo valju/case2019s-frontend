@@ -26,6 +26,7 @@ import UserDetailsView from '../views/userViews/UserDetailsView';
 import Home from '../views/Home';
 import EventTypes from '../views/eventTypeViews/EventTypes';
 import EventTypeDetailsView from '../views/eventTypeViews/EventTypeDetailsView';
+import EventTypeUpdateView from '../views/eventTypeViews/EventTypeUpdateView';
 import LocationTypes from '../views/locationTypeViews/LocationTypes';
 import Areas from '../views/areaViews/Areas';
 import AreaDetailsView from '../views/areaViews/AreaDetailsView';
@@ -221,6 +222,7 @@ const Navigator = () => {
             <Route exact path="/area/:id" component={AreaDetailsView} />
             <Route path="/eventtypes" component={EventTypes} />
             <Route exact path="/eventtype/:id" component={EventTypeDetailsView} />
+            <Route exact path="/eventtype/update/:id" component={EventTypeUpdateView} />
             <Route exact path="/locations" component={Locations} />
             <Route exact path="/locations/:id" component={LocationDetailsView} />
             <Route path="/locationtypes" component={LocationTypes} />
