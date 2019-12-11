@@ -32,8 +32,9 @@ import Areas from '../views/areaViews/Areas';
 import AreaDetailsView from '../views/areaViews/AreaDetailsView';
 import Locations from '../views/locationViews/Locations';
 import UrgencyTypes from '../views/urgencyTypeViews/UrgencyTypes';
-import AreaUsers from '../views/areaUserViews/AreaUsers';
 import LocationDetailsView from '../views/locationViews/LocationDetailsView';
+import AreaUsers from '../views/areaUserViews/AreaUsers';
+import AreaUserDetailsView from '../views/areaUserViews/AreaUserDetailsView';
 
 const drawerWidth = 240;
 
@@ -229,7 +230,8 @@ const Navigator = () => {
             <Route path="/urgencytypes" component={UrgencyTypes} />
             <Route exact path="/users" component={Users} />
             <Route exact path="/users/:id" component={UserDetailsView} />
-            <Route path="/areausers" component={AreaUsers} />
+            <Route exact path="/areausers" component={AreaUsers} />
+            <Route exact path="/areausers/:areaId/:userId" component={AreaUserDetailsView} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </div>
